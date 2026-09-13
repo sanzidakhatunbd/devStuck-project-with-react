@@ -1,11 +1,14 @@
-import bannerImage from '../assets/banner-stack.png'
+import bannerImage from '../assets/banner-stack.png';
 
 const Banner = () => {
     return (
         <section className="container mx-auto px-6">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
-                <div className="flex-1 text-center lg:text-left pt-10 lg:pt-0">
-                    <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+            <div className="flex min-h-[420px] flex-col items-center justify-center gap-10 py-12 sm:py-16 lg:min-h-[480px] lg:flex-row lg:gap-8 lg:py-16">
+
+                {/* Content */}
+                <div className="flex-1 text-center lg:text-left">
+
+                    <h1 className="text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-[48px]">
                         <span className="block text-slate-900">
                             Build Your Ideal
                         </span>
@@ -15,33 +18,44 @@ const Banner = () => {
                         </span>
                     </h1>
 
-                    <p className="mt-5 text-gray-500 text-base md:text-lg max-w-md mx-auto lg:mx-0">
+                    <p className="mx-auto mt-5 max-w-md text-sm leading-6 text-gray-500 sm:text-base lg:mx-0">
                         Explore frontend, backend, database, and tooling
                         options, compare them side by side, and put together
                         the stack that fits your next project.
                     </p>
 
-                    <div className="mt-8 flex items-center gap-4 justify-center lg:justify-start">
-                        <button className="px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-semibold text-white bg-linear-to-r from-orange-500 to-pink-600 hover:opacity-90">
+                    {/* Buttons */}
+                    <div className="mt-7 flex items-center justify-center gap-3 sm:gap-4 lg:justify-start">
+
+                        <button
+                            type="button"
+                            className="rounded-lg bg-linear-to-r from-orange-500 to-pink-600 px-4 py-2.5 text-xs font-semibold text-white transition-opacity hover:opacity-90 sm:px-5 sm:py-3 sm:text-sm"
+                        >
                             Explore Technologies
                         </button>
 
-                        <button className="flex items-center gap-2 px-4 py-2 sm:px-10 sm:py-3 rounded-lg font-semibold text-gray-700 border border-gray-200 hover:border-gray-300">
+                        <button
+                            type="button"
+                            className="rounded-lg border border-gray-200 px-6 py-2.5 text-xs font-semibold text-gray-700 transition-colors hover:border-gray-300 sm:px-9 sm:py-3 sm:text-sm"
+                        >
                             Learn More
                         </button>
+
                     </div>
                 </div>
-                <div className="flex-1 flex lg:justify-end">
+
+                {/* Image */}
+                <div className="flex flex-1 items-center justify-center lg:justify-end">
                     <img
                         src={bannerImage}
                         alt="Development stack illustration"
-                        className="w-full max-w-md lg:max-w-lg"
+                        className="w-full max-w-[330px] object-contain sm:max-w-[380px] lg:max-w-[440px]"
                     />
                 </div>
 
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Banner
+export default Banner;

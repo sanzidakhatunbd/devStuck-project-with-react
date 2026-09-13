@@ -3,13 +3,18 @@ import type { Itechnology } from '../../types/techType';
 import { Bounce, toast } from 'react-toastify';
 
 const TechCards = ({ tech }: { tech: Itechnology }) => {
-    const [isSelected, setIsSelected] = useState(false)
+    const [isSelected, setIsSelected] = useState(false);
     return (
-        <div className="rounded-3xl border border-gray-200 bg-white p-5 flex flex-col">
+        <div
+            className={`rounded-3xl border bg-white p-5 flex flex-col ${isSelected
+                    ? "border-pink-400"
+                    : "border-gray-200"
+                }`}
+        >
 
             <div className="flex items-start justify-between">
                 <img className="h-12 w-12 object-contain" src={tech.icon} alt={tech.name} />
-                <span className="rounded-full border border-blue-100 bg-[#F2FAFF] px-3 py-1 text-lg font-medium text-blue-500">
+                <span className="rounded-full border border-pink-100 bg-pink-100 px-3 py-1 text-lg font-medium text-pink-500">
                     {tech.badge}
                 </span>
             </div>
@@ -51,11 +56,10 @@ const TechCards = ({ tech }: { tech: Itechnology }) => {
                         theme: "light",
                         transition: Bounce
                     });
-                }} className={`mt-8 w-full rounded-2xl py-4 text-xl font-medium transition ${
-        isSelected
-            ? "bg-blue-100 text-blue-600"
-            : "bg-gray-900 text-white hover:bg-gray-950"
-    }`} disabled={isSelected}>
+                }} className={`mt-8 w-full rounded-2xl py-4 text-xl font-medium transition ${isSelected
+                        ? "bg-pink-100 text-pink-600"
+                        : "bg-gray-900 text-white hover:bg-gray-950"
+                    }`} disabled={isSelected}>
                     {isSelected ? "✓ Added to Stack" : "Add to Stack"}
                 </button>
             </div>

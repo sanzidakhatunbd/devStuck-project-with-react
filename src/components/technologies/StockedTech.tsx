@@ -4,13 +4,16 @@ import TechCards from './TechCards';
 
 const StockedTech = ({ technologies }: { technologies: Itechnology[] }) => {
     return (
+     <div>
         <div className="grid grid-cols-3 gap-3">
             {technologies.map((tech:Itechnology, index:number) =>{
                 return(
-                     <TechCards key={index} tech={tech} />
+                    <TechCards key={index} tech={tech} />
                 );
             })} 
         </div>
+        <div></div>
+      </div>
     );
 };
 
