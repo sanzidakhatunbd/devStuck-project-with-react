@@ -16,7 +16,7 @@ function App() {
     <>
       <Nav />
       <Banner />
-      <Suspense fallback={<h2>Loading ... ...</h2>}>
+      <Suspense fallback={<h2 className="min-h-screen flex items-center justify-center italic font-bold text-3xl">Loading ... ...</h2>}>
       <Technologies  technologiesPromise={technologiesPromise} />
       </Suspense>
       <Footer />
