@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import type { Itechnology } from '../../types/techType';
+import { Bounce, toast } from 'react-toastify';
 
-const TechCard = ({ tech }: { tech: Itechnology }) => {
+const TechCards = ({ tech }: { tech: Itechnology }) => {
+    const [isSelected, setIsSelected] = useState(false)
     return (
         <div className="rounded-3xl border border-gray-200 bg-white p-5 flex flex-col">
 
@@ -35,12 +38,29 @@ const TechCard = ({ tech }: { tech: Itechnology }) => {
                     </span>
                 </div>
 
-                <button className="mt-8 w-full rounded-2xl bg-gray-900 py-4 text-xl font-medium text-white transition hover:bg-gray-950">
-                    Add to Stack
+                <button onClick={() => {
+                    setIsSelected(true);
+                    toast.success(`${tech.name} added to your stack!`, {
+                        position: "bottom-right",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: false,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                        transition: Bounce
+                    });
+                }} className={`mt-8 w-full rounded-2xl py-4 text-xl font-medium transition ${
+        isSelected
+            ? "bg-blue-100 text-blue-600"
+            : "bg-gray-900 text-white hover:bg-gray-950"
+    }`} disabled={isSelected}>
+                    {isSelected ? "✓ Added to Stack" : "Add to Stack"}
                 </button>
             </div>
         </div>
     );
 };
 
-export default TechCard;
+export default TechCards;

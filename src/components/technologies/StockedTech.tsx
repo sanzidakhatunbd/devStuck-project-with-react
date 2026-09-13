@@ -1,13 +1,13 @@
 import type { Itechnology } from '../../types/techType';
-import TechCard from './techCard';
+import TechCards from './TechCards';
 
 
 const StockedTech = ({ technologies }: { technologies: Itechnology[] }) => {
     return (
-        <div className="container mx-auto mt-10 grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-3 gap-3">
             {technologies.map((tech:Itechnology, index:number) =>{
                 return(
-                     <TechCard key={index} tech={tech} />
+                     <TechCards key={index} tech={tech} />
                 );
             })} 
         </div>
