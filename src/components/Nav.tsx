@@ -13,37 +13,37 @@ const Nav = () => {
                 </a>
                 <ul className=" absolute left-1/2 hidden -translate-x-1/2 items-center gap-7 md:flex">
                     <li>
-                        <a href="#" className="text-[13px] font-medium text-pink-600 transition-colors">
+                        <a href="#" className="text-sm font-medium text-pink-600 transition-colors">
                             Home
                         </a>
                     </li>
 
                     <li>
-                        <a href="#" className="text-[13px] font-medium text-gray-600 transition-colors hover:text-pink-600">
+                        <a href="#" className="text-sm font-medium text-gray-600 transition-colors hover:text-pink-600">
                             Technologies
                         </a>
                     </li>
 
                     <li>
-                        <a href="#" className="text-[13px] font-medium text-gray-600 transition-colors hover:text-pink-600">
+                        <a href="#" className="text-sm font-medium text-gray-600 transition-colors hover:text-pink-600">
                             Projects
                         </a>
                     </li>
 
                     <li>
-                        <a href="#" className="text-[13px] font-medium text-gray-600 transition-colors hover:text-pink-600">
+                        <a href="#" className="text-sm font-medium text-gray-600 transition-colors hover:text-pink-600">
                             About
                         </a>
                     </li>
 
                     <li>
-                        <a href="#" className="text-[13px] font-medium text-gray-600 transition-colors hover:text-pink-600">
+                        <a href="#" className="text-sm font-medium text-gray-600 transition-colors hover:text-pink-600">
                             Contact
                         </a>
                     </li>
                 </ul>
                 <div className="ml-auto flex items-center gap-3 sm:gap-4">
-                    <button type="button" className="text-[13px] font-medium text-gray-600 transition-colors hover:text-gray-900">
+                    <button type="button" className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">
                         Sign In
                     </button>
 

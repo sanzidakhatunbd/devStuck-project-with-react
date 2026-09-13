@@ -3,9 +3,7 @@ import bannerImage from '../assets/banner-stack.png';
 const Banner = () => {
     return (
         <section className="container mx-auto px-6">
-            <div className="flex min-h-[420px] flex-col items-center justify-center gap-10 py-12 sm:py-16 lg:min-h-[480px] lg:flex-row lg:gap-8 lg:py-16">
-
-                {/* Content */}
+            <div className="flex min-h-105 flex-col items-center justify-center gap-10 py-12 sm:py-16 lg:min-h-120 lg:flex-row lg:gap-8 lg:py-16">
                 <div className="flex-1 text-center lg:text-left">
 
                     <h1 className="text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-[48px]">
@@ -23,8 +21,6 @@ const Banner = () => {
                         options, compare them side by side, and put together
                         the stack that fits your next project.
                     </p>
-
-                    {/* Buttons */}
                     <div className="mt-7 flex items-center justify-center gap-3 sm:gap-4 lg:justify-start">
 
                         <button
@@ -43,13 +39,11 @@ const Banner = () => {
 
                     </div>
                 </div>
-
-                {/* Image */}
                 <div className="flex flex-1 items-center justify-center lg:justify-end">
                     <img
                         src={bannerImage}
                         alt="Development stack illustration"
-                        className="w-full max-w-[330px] object-contain sm:max-w-[380px] lg:max-w-[440px]"
+                        className="w-full max-w-82.5 object-contain sm:max-w-95 lg:max-w-110"
                     />
                 </div>
 
