@@ -27,8 +27,7 @@ const TechCards = ({ tech, selectedTeches, setSelectedTeches }: TechCardsProps) 
     };
 
     return (
-        <div className={`flex flex-col rounded-2xl border bg-white p-4 ${isSelected ? "border-pink-400" : "border-gray-200"}`}
-        >
+        <div className={`flex flex-col rounded-2xl border bg-white p-4 ${isSelected ? "border-pink-400" : "border-gray-200"}`}>
             <div className="flex items-start justify-between">
                 <img className="h-8 w-8 object-contain" src={tech.icon} alt={tech.name} />
                 <span className="rounded-full border border-pink-100 bg-pink-50 px-2 py-1 text-sm font-medium text-pink-500">
